@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper', {
+const swiperTop = new Swiper('.top__swiper', {
   effect: 'fade',
   // autoplay: {
   //   delay: 2500,
@@ -10,4 +10,25 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+const swiperAbout = new Swiper(".about__slider", {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  freeMode: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+const accordeontriger = document.querySelector('.accordeon__triger');
+
+
+document.querySelectorAll('.accordeon__triger').
+forEach((item) => {
+  item.addEventListener('click', ()=>{
+    item.parentNode.classList.toggle('accordeon__item--active');
+  })
+});
+
 
